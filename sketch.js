@@ -7,5 +7,22 @@ function setup(){
 
 function draw(){
 background(0);
+if (keyDown("up")){
+changePosition(0,-2);
+}
+if (keyDown("down")){
+    changePosition(0,2);
+}
+if (keyDown("left")){
+    changePosition(-2,0);
+}
+if (keyDown("right")){
+    changePosition(2,0);
+}
 drawSprites();
+}
+
+function changePosition(x,y){
+    box.x=box.x+x;
+    box.y=box.y+y;
 }
